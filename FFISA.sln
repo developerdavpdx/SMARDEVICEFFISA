@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFISAPROD", "FFISA\FFISAPROD.csproj", "{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "FFISASETUPPROD", "FFISASETUPPROD\FFISASETUPPROD.vddproj", "{DC0E0149-C63B-4811-9A34-AAA01BEC14F8}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "FFISASETUP", "FFISASETUP\FFISASETUP.vddproj", "{354F9B6D-D337-4673-8625-B28DE7787A2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DC0E0149-C63B-4811-9A34-AAA01BEC14F8}.Debug|Any CPU.ActiveCfg = Release
+		{DC0E0149-C63B-4811-9A34-AAA01BEC14F8}.Release|Any CPU.ActiveCfg = Release
+		{354F9B6D-D337-4673-8625-B28DE7787A2A}.Debug|Any CPU.ActiveCfg = Debug
+		{354F9B6D-D337-4673-8625-B28DE7787A2A}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

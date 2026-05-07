@@ -1,0 +1,12 @@
+OC
+Producto
+Cantidad
+Checks restantes
+boton aceptar 
+boton cancelar
+
+mostrar vista previa de como se enviara la solicitud.
+
+bucar en tabla @FFISA_E_MAIL
+
+campo para impresion OITM

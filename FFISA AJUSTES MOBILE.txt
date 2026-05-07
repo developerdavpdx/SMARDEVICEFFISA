@@ -1,0 +1,33 @@
+--Colocar nombre de sociedad en el menu principal en lugar de SAP BUSINNES ONE (OK)
+--Revisar boton login desactivado (OK)
+--Centrar titulos contra iconos en menu principal (OK)
+--Colocar version de desarrollo en la pantalla principal (1.25) (OK)
+--Revisar Ortografía (OK)
+--Cambiar titulo a Entrada en Sap (OK) bajar un poco la instruccion
+--Mover titulos de entrada de mercancia a la derecha del icono (OK)
+--Colocar subtitulo seleccione la opcion deseada arriba de los iconos (OK)
+
+--Colocar intrucción en series de numeración "Seleccione la serie de numeración deseada"antes del icono seleccionar todos (OK) quitar deseada
+
+--Colocar boton para seleccionar la orden de compra (OK)
+
+--Considerar para proximas versiones(no proyecto fiber) permitir ingresar mas de una OC 
+al mismo tiempo
+
+--Quitar U_ en checklist OC (OK)
+--Agregar titulo OC: + OrdenCompra en checklist (OK)
+--Dejar CHECKLIST solamente (OK)
+--Cambiar icono de candado por boton solicitar autorizacion(background yellow) (OK)
+
+--Cambiar ARTICULOS por LISTADO DE ARTICULOS (OK)
+--Agregar titulo OC: + OrdenCompra en ARTICULOS (OK) 
+--Agregar boton seleccionar en ARTICULOS (OK)
+
+--AGREGAR POWER BY PARADOX en LOGIN y SAP (OK)
+--COLOCAR TITULOS EN NEGRITAS EN LOGIN (OK)
+--QUITAR TITULO SAP BUSINNES ONE SOLO DEJAR FISFIBER (OK)
+
+--SELECIONAR SOLO UNA IMPRESORA POR DEFAULT(OK)
+--Agregar instruccion de seleccione una impresora (OK) Alinear a la izquierda
+--Quitar seleccionar todos (OK)
+

@@ -1,0 +1,704 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FA7BA5F-6E35-4E61-B7DF-2B18C7D1DE61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FFISA</RootNamespace>
+    <AssemblyName>FFISAPROD</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>2AC76CE7-3E8C-402d-85E7-AE9C98D7B6BA</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>SmartDeviceProject3</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6.5.3 Professional DTK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>FFISA.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PocketPC</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inventarios\RecuentoInventarios\DatosMaestrosRecuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\DatosMaestrosRecuento.Designer.cs">
+      <DependentUpon>DatosMaestrosRecuento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\DocumentosSap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\DocumentosSap.Designer.cs">
+      <DependentUpon>DocumentosSap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\RecuentosPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\RecuentosPendientes.Designer.cs">
+      <DependentUpon>RecuentosPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\EscaneosRecuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\EscaneosRecuentos.Designer.cs">
+      <DependentUpon>EscaneosRecuentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\MenuRecuentoInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\RecuentoInventarios\MenuRecuentoInventarios.designer.cs">
+      <DependentUpon>MenuRecuentoInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\Articulos.Designer.cs">
+      <DependentUpon>Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\CuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\CuentasContables.Designer.cs">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\DatosMaestrosTraspaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\DatosMaestrosTraspaso.Designer.cs">
+      <DependentUpon>DatosMaestrosTraspaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\EscaneosTransferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\EscaneosTransferencias.Designer.cs">
+      <DependentUpon>EscaneosTransferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\MenuTransferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\MenuTransferencias.designer.cs">
+      <DependentUpon>MenuTransferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\TransferenciasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransferenciaStock\TransferenciasPendientes.Designer.cs">
+      <DependentUpon>TransferenciasPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\Articulos.Designer.cs">
+      <DependentUpon>Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\CuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\CuentasContables.Designer.cs">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\DatosMaestrosArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\DatosMaestrosArticulo.Designer.cs">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\SalidasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\SalidasPendientes.Designer.cs">
+      <DependentUpon>SalidasPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\EscaneosSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\EscaneosSalidas.Designer.cs">
+      <DependentUpon>EscaneosSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\MenuSalidasDirectas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\SalidasDirectas\MenuSalidasDirectas.designer.cs">
+      <DependentUpon>MenuSalidasDirectas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\CuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\CuentasContables.Designer.cs">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\DatosMaestrosArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\DatosMaestrosArticulo.Designer.cs">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\EntradasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\EntradasPendientes.Designer.cs">
+      <DependentUpon>EntradasPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\EscaneosEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\EscaneosEntradas.Designer.cs">
+      <DependentUpon>EscaneosEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\PlantillasEtiqueta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\PlantillasEtiqueta.Designer.cs">
+      <DependentUpon>PlantillasEtiqueta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\MenuEntradasDirectas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\MenuEntradasDirectas.designer.cs">
+      <DependentUpon>MenuEntradasDirectas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\MenuInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\MenuInventarios.Designer.cs">
+      <DependentUpon>MenuInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\EntradasDirectas\Articulos.Designer.cs">
+      <DependentUpon>Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\CustomMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\CustomMessage.Designer.cs">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\DialogoFechaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\DialogoFechaEntrada.Designer.cs">
+      <DependentUpon>DialogoFechaEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ImpresorasRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ImpresorasRed.Designer.cs">
+      <DependentUpon>ImpresorasRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\AccesoDatosVentas.cs" />
+    <Compile Include="Model\AccesoDatosInventarios.cs" />
+    <Compile Include="Model\BorderedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\FormHelper.cs" />
+    <Compile Include="Model\LogicaVentas.cs" />
+    <Compile Include="Model\DeviceManager.cs" />
+    <Compile Include="Model\SoundPlayer.cs" />
+    <Compile Include="Model\ZebraPrinter.cs" />
+    <Compile Include="Compras\AutorizacionOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\AutorizacionOC.Designer.cs">
+      <DependentUpon>AutorizacionOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CheckListOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\CheckListOC.Designer.cs">
+      <DependentUpon>CheckListOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\DatosGeneralesEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\DatosGeneralesEM.Designer.cs">
+      <DependentUpon>DatosGeneralesEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\DetailsEMPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\DetailsEMPendientes.Designer.cs">
+      <DependentUpon>DetailsEMPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\ListadoEMPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\ListadoEMPendientes.Designer.cs">
+      <DependentUpon>ListadoEMPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\MenuCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\MenuCompras.designer.cs">
+      <DependentUpon>MenuCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SeleccionArticuloOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\SeleccionArticuloOC.Designer.cs">
+      <DependentUpon>SeleccionArticuloOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AccesoDatosGlobal.cs" />
+    <Compile Include="Model\LogicaGlobal.cs">
+    </Compile>
+    <Compile Include="Compras\ListadoOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\ListadoOC.Designer.cs">
+      <DependentUpon>ListadoOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SeriesNumeracionOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\SeriesNumeracionOC.Designer.cs">
+      <DependentUpon>SeriesNumeracionOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Inventarios\RecuentoInventarios\DatosMaestrosRecuento.resx">
+      <DependentUpon>DatosMaestrosRecuento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\RecuentoInventarios\DocumentosSap.resx">
+      <DependentUpon>DocumentosSap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\RecuentoInventarios\RecuentosPendientes.resx">
+      <DependentUpon>RecuentosPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\RecuentoInventarios\EscaneosRecuentos.resx">
+      <DependentUpon>EscaneosRecuentos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\RecuentoInventarios\MenuRecuentoInventarios.resx">
+      <DependentUpon>MenuRecuentoInventarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\Articulos.resx">
+      <DependentUpon>Articulos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\CuentasContables.resx">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\DatosMaestrosTraspaso.resx">
+      <DependentUpon>DatosMaestrosTraspaso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\EscaneosTransferencias.resx">
+      <DependentUpon>EscaneosTransferencias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\MenuTransferencias.resx">
+      <DependentUpon>MenuTransferencias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\TransferenciaStock\TransferenciasPendientes.resx">
+      <DependentUpon>TransferenciasPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\Articulos.resx">
+      <DependentUpon>Articulos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\CuentasContables.resx">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\DatosMaestrosArticulo.resx">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\SalidasPendientes.resx">
+      <DependentUpon>SalidasPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\EscaneosSalidas.resx">
+      <DependentUpon>EscaneosSalidas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\SalidasDirectas\MenuSalidasDirectas.resx">
+      <DependentUpon>MenuSalidasDirectas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\CuentasContables.resx">
+      <DependentUpon>CuentasContables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\DatosMaestrosArticulo.resx">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\EntradasPendientes.resx">
+      <DependentUpon>EntradasPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\EscaneosEntradas.resx">
+      <DependentUpon>EscaneosEntradas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\PlantillasEtiqueta.resx">
+      <DependentUpon>PlantillasEtiqueta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\MenuEntradasDirectas.resx">
+      <DependentUpon>MenuEntradasDirectas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\MenuInventarios.resx">
+      <DependentUpon>MenuInventarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\EntradasDirectas\Articulos.resx">
+      <DependentUpon>Articulos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\CustomMessage.resx">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\DialogoFechaEntrada.resx">
+      <DependentUpon>DialogoFechaEntrada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ImpresorasRed.resx">
+      <DependentUpon>ImpresorasRed.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\AutorizacionOC.resx">
+      <DependentUpon>AutorizacionOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\CheckListOC.resx">
+      <DependentUpon>CheckListOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\DatosGeneralesEM.resx">
+      <DependentUpon>DatosGeneralesEM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\DetailsEMPendientes.resx">
+      <DependentUpon>DetailsEMPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\ListadoEMPendientes.resx">
+      <DependentUpon>ListadoEMPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\MenuCompras.resx">
+      <DependentUpon>MenuCompras.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\SeleccionArticuloOC.resx">
+      <DependentUpon>SeleccionArticuloOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\ListadoOC.resx">
+      <DependentUpon>ListadoOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\SeriesNumeracionOC.resx">
+      <DependentUpon>SeriesNumeracionOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\DatosMaestrosArticulo.resx">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\DatosMaestrosOV.resx">
+      <DependentUpon>DatosMaestrosOV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\EscaneosOV.resx">
+      <DependentUpon>EscaneosOV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\EntregasPendientes.resx">
+      <DependentUpon>EntregasPendientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\MenuEntregas.resx">
+      <DependentUpon>MenuEntregas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\MenuVentas.resx">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\ArticulosOV.resx">
+      <DependentUpon>ArticulosOV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\OrdenesVenta.resx">
+      <DependentUpon>OrdenesVenta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Ventas\DatosMaestrosArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\DatosMaestrosArticulo.Designer.cs">
+      <DependentUpon>DatosMaestrosArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\DatosMaestrosOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\DatosMaestrosOV.Designer.cs">
+      <DependentUpon>DatosMaestrosOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\EscaneosOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\EscaneosOV.Designer.cs">
+      <DependentUpon>EscaneosOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\EntregasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\EntregasPendientes.Designer.cs">
+      <DependentUpon>EntregasPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\OrdenesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\OrdenesVenta.Designer.cs">
+      <DependentUpon>OrdenesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\MenuEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\MenuEntregas.designer.cs">
+      <DependentUpon>MenuEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\MenuVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\MenuVentas.Designer.cs">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ArticulosOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\ArticulosOV.Designer.cs">
+      <DependentUpon>ArticulosOV.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FFISA.ico" />
+    <Content Include="Imagenes\Autorizar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\CerrarSesion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\close-button.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\close.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\close2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Continuar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\ContinuarD.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Enviar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Generar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Guardar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Home.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Imprimir.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\ok.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\ok2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\OkBlue.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\OkGray.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\PBPDX.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\PrinterSetting.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Regresar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\RegresarD.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Revisado.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\SAPB1HD.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Warning.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\warningB.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\WarningGray.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\WindowsMobile.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\cerrarsesion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Click.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Error.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Aviso.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Inicio.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Login.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Mouse.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\Ok.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\PaperSlide.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonidos\salir.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
