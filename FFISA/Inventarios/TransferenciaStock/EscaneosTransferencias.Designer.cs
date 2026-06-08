@@ -37,6 +37,7 @@
             this.Body = new System.Windows.Forms.Panel();
             this.lblOC = new System.Windows.Forms.Label();
             this.LvDetailsEntrada = new System.Windows.Forms.ListView();
+            this.LblTotalTraspasos = new System.Windows.Forms.Label();
             this.Footer.SuspendLayout();
             this.Header.SuspendLayout();
             this.Body.SuspendLayout();
@@ -95,6 +96,7 @@
             // Body
             // 
             this.Body.BackColor = System.Drawing.Color.White;
+            this.Body.Controls.Add(this.LblTotalTraspasos);
             this.Body.Controls.Add(this.lblOC);
             this.Body.Controls.Add(this.LvDetailsEntrada);
             this.Body.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,7 +122,16 @@
             this.LvDetailsEntrada.TabIndex = 21;
             this.LvDetailsEntrada.View = System.Windows.Forms.View.Details;
             // 
-            // EscaneosSalidas
+            // LblTotalTraspasos
+            // 
+            this.LblTotalTraspasos.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.LblTotalTraspasos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            this.LblTotalTraspasos.Location = new System.Drawing.Point(7, 230);
+            this.LblTotalTraspasos.Name = "LblTotalTraspasos";
+            this.LblTotalTraspasos.Size = new System.Drawing.Size(226, 18);
+            this.LblTotalTraspasos.Text = "No. rollos: 0";
+            // 
+            // EscaneosTransferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -131,7 +142,7 @@
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "EscaneosSalidas";
+            this.Name = "EscaneosTransferencias";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Footer.ResumeLayout(false);
             this.Header.ResumeLayout(false);
@@ -150,5 +161,6 @@
         private System.Windows.Forms.Panel Body;
         private System.Windows.Forms.Label lblOC;
         private System.Windows.Forms.ListView LvDetailsEntrada;
+        public System.Windows.Forms.Label LblTotalTraspasos;
     }
 }

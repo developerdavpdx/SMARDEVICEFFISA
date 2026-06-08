@@ -92,7 +92,7 @@ namespace FFISA.Inventarios.RecuentoInventarios
                 }
                 catch (Exception ex)
                 {
-                    Logic.ShowException(ex, "No fue posible obtener los detalles de la OV", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                    Logic.ShowException(ex, "No fue posible obtener los detalles del recuento", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                     Cursor.Current = Cursors.Default;
                 }
             }

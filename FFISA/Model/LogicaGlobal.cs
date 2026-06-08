@@ -40,7 +40,7 @@ namespace FFISA.Model
                 request.Method = "GET";
                 request.ContentType = "application/xml";
                 request.ContentLength = xmlData.Length;
-                request.Timeout = 600000; // 2 minutos en milisegundos
+                request.Timeout = 60000; // 2 minutos en milisegundos
 
 
 
@@ -86,6 +86,7 @@ namespace FFISA.Model
             }
 
         }
+
         public List<Dictionary<string, string>> ExecGetRequest(string url, Dictionary<string, string> parameters, bool showwarning, bool PlaySound)
         {
             List<Dictionary<string, string>> items = new List<Dictionary<string, string>>();
@@ -96,7 +97,7 @@ namespace FFISA.Model
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(webServiceUrl);
                 request.Method = "GET";
                 request.ContentType = "application/xml";
-                request.Timeout = 600000;
+                request.Timeout = 60000;
 
                 if (parameters != null && parameters.Count > 0)
                 {
@@ -170,6 +171,7 @@ namespace FFISA.Model
 
             return items;
         }
+
         public List<Dictionary<string, string>> ExecPostRequest(string url, string XML, bool PlaySound, string CustomMessage)
         {
 
@@ -181,7 +183,7 @@ namespace FFISA.Model
 
             // Crear la solicitud HTTP
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(webServiceUrl);
-            request.Timeout = 600000;
+            request.Timeout = 60000;
             request.Method = "POST";
             request.ContentType = "application/xml";
             request.ContentLength = xmlBytes.Length; // Usamos la longitud correcta en bytes

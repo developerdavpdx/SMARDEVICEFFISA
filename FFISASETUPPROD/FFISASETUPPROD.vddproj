@@ -649,7 +649,7 @@
         {
             "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_1288DCA558F145D28FFF87E120FA6D28"
             {
-            "SourcePath" = "8:..\\FFISA\\obj\\Release\\FFISAPROD.exe"
+            "SourcePath" = "8:..\\FFISA\\obj\\Debug\\FFISAPROD.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_681DF48950E34CB182B3E6732D358140"
@@ -711,7 +711,7 @@
         {
             "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_B355DF0A7CA24EDFAF45555B6FDD2278"
             {
-            "Name" = "8:FFISA PRODUCTIVO 1.86"
+            "Name" = "8:FFISA PRODUCTIVO 1.88"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

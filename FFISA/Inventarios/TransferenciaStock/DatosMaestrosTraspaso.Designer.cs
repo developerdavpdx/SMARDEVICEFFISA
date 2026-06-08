@@ -35,6 +35,8 @@
             this.Header = new System.Windows.Forms.Panel();
             this.LblOrdenVenta = new System.Windows.Forms.Label();
             this.Body = new System.Windows.Forms.Panel();
+            this.LblTotalTraspasos = new System.Windows.Forms.Label();
+            this.LblFolio = new System.Windows.Forms.Label();
             this.PtbValidaAlmacenDestino = new System.Windows.Forms.PictureBox();
             this.LblAlmacenDestino = new System.Windows.Forms.Label();
             this.TxtAlmacenDestinoVAL = new System.Windows.Forms.TextBox();
@@ -106,6 +108,8 @@
             // Body
             // 
             this.Body.BackColor = System.Drawing.Color.White;
+            this.Body.Controls.Add(this.LblTotalTraspasos);
+            this.Body.Controls.Add(this.LblFolio);
             this.Body.Controls.Add(this.PtbValidaAlmacenDestino);
             this.Body.Controls.Add(this.LblAlmacenDestino);
             this.Body.Controls.Add(this.TxtAlmacenDestinoVAL);
@@ -124,11 +128,29 @@
             this.Body.Name = "Body";
             this.Body.Size = new System.Drawing.Size(240, 260);
             // 
+            // LblTotalTraspasos
+            // 
+            this.LblTotalTraspasos.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.LblTotalTraspasos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            this.LblTotalTraspasos.Location = new System.Drawing.Point(7, 238);
+            this.LblTotalTraspasos.Name = "LblTotalTraspasos";
+            this.LblTotalTraspasos.Size = new System.Drawing.Size(226, 18);
+            this.LblTotalTraspasos.Text = "No. rollos: 0";
+            // 
+            // LblFolio
+            // 
+            this.LblFolio.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.LblFolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            this.LblFolio.Location = new System.Drawing.Point(6, 6);
+            this.LblFolio.Name = "LblFolio";
+            this.LblFolio.Size = new System.Drawing.Size(229, 17);
+            this.LblFolio.Text = "Folio: XXXXXX";
+            // 
             // PtbValidaAlmacenDestino
             // 
             this.PtbValidaAlmacenDestino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
             this.PtbValidaAlmacenDestino.Image = ((System.Drawing.Image)(resources.GetObject("PtbValidaAlmacenDestino.Image")));
-            this.PtbValidaAlmacenDestino.Location = new System.Drawing.Point(210, 130);
+            this.PtbValidaAlmacenDestino.Location = new System.Drawing.Point(210, 128);
             this.PtbValidaAlmacenDestino.Name = "PtbValidaAlmacenDestino";
             this.PtbValidaAlmacenDestino.Size = new System.Drawing.Size(25, 25);
             this.PtbValidaAlmacenDestino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,7 +160,7 @@
             // 
             this.LblAlmacenDestino.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblAlmacenDestino.ForeColor = System.Drawing.Color.Gray;
-            this.LblAlmacenDestino.Location = new System.Drawing.Point(6, 113);
+            this.LblAlmacenDestino.Location = new System.Drawing.Point(6, 111);
             this.LblAlmacenDestino.Name = "LblAlmacenDestino";
             this.LblAlmacenDestino.Size = new System.Drawing.Size(114, 14);
             this.LblAlmacenDestino.Text = "Almacén Destino";
@@ -146,7 +168,7 @@
             // TxtAlmacenDestinoVAL
             // 
             this.TxtAlmacenDestinoVAL.BackColor = System.Drawing.Color.White;
-            this.TxtAlmacenDestinoVAL.Location = new System.Drawing.Point(6, 132);
+            this.TxtAlmacenDestinoVAL.Location = new System.Drawing.Point(6, 130);
             this.TxtAlmacenDestinoVAL.Name = "TxtAlmacenDestinoVAL";
             this.TxtAlmacenDestinoVAL.Size = new System.Drawing.Size(198, 21);
             this.TxtAlmacenDestinoVAL.TabIndex = 17;
@@ -156,14 +178,14 @@
             // 
             this.LblComentarios.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblComentarios.ForeColor = System.Drawing.Color.Gray;
-            this.LblComentarios.Location = new System.Drawing.Point(6, 196);
+            this.LblComentarios.Location = new System.Drawing.Point(6, 194);
             this.LblComentarios.Name = "LblComentarios";
             this.LblComentarios.Size = new System.Drawing.Size(88, 14);
             this.LblComentarios.Text = "Comentarios";
             // 
             // TxtComentariosCLN
             // 
-            this.TxtComentariosCLN.Location = new System.Drawing.Point(6, 213);
+            this.TxtComentariosCLN.Location = new System.Drawing.Point(6, 211);
             this.TxtComentariosCLN.Name = "TxtComentariosCLN";
             this.TxtComentariosCLN.Size = new System.Drawing.Size(227, 21);
             this.TxtComentariosCLN.TabIndex = 7;
@@ -172,7 +194,7 @@
             // 
             this.LblAlmacenOrigen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblAlmacenOrigen.ForeColor = System.Drawing.Color.Gray;
-            this.LblAlmacenOrigen.Location = new System.Drawing.Point(6, 69);
+            this.LblAlmacenOrigen.Location = new System.Drawing.Point(6, 67);
             this.LblAlmacenOrigen.Name = "LblAlmacenOrigen";
             this.LblAlmacenOrigen.Size = new System.Drawing.Size(110, 15);
             this.LblAlmacenOrigen.Text = "Almacén Origen";
@@ -181,7 +203,7 @@
             // 
             this.TxtAlmacenOrigenVALCLN.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtAlmacenOrigenVALCLN.Enabled = false;
-            this.TxtAlmacenOrigenVALCLN.Location = new System.Drawing.Point(6, 87);
+            this.TxtAlmacenOrigenVALCLN.Location = new System.Drawing.Point(6, 85);
             this.TxtAlmacenOrigenVALCLN.Name = "TxtAlmacenOrigenVALCLN";
             this.TxtAlmacenOrigenVALCLN.Size = new System.Drawing.Size(229, 21);
             this.TxtAlmacenOrigenVALCLN.TabIndex = 3;
@@ -190,7 +212,7 @@
             // 
             this.LblCantidad.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblCantidad.ForeColor = System.Drawing.Color.Gray;
-            this.LblCantidad.Location = new System.Drawing.Point(146, 28);
+            this.LblCantidad.Location = new System.Drawing.Point(146, 26);
             this.LblCantidad.Name = "LblCantidad";
             this.LblCantidad.Size = new System.Drawing.Size(64, 14);
             this.LblCantidad.Tag = "";
@@ -200,7 +222,7 @@
             // 
             this.TxtCantidadVALCLN.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtCantidadVALCLN.Enabled = false;
-            this.TxtCantidadVALCLN.Location = new System.Drawing.Point(146, 45);
+            this.TxtCantidadVALCLN.Location = new System.Drawing.Point(146, 43);
             this.TxtCantidadVALCLN.Name = "TxtCantidadVALCLN";
             this.TxtCantidadVALCLN.Size = new System.Drawing.Size(90, 21);
             this.TxtCantidadVALCLN.TabIndex = 2;
@@ -209,7 +231,7 @@
             // 
             this.LblLoteOrigen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblLoteOrigen.ForeColor = System.Drawing.Color.Gray;
-            this.LblLoteOrigen.Location = new System.Drawing.Point(6, 28);
+            this.LblLoteOrigen.Location = new System.Drawing.Point(6, 26);
             this.LblLoteOrigen.Name = "LblLoteOrigen";
             this.LblLoteOrigen.Size = new System.Drawing.Size(131, 14);
             this.LblLoteOrigen.Tag = "";
@@ -218,7 +240,7 @@
             // TxtLoteOrigenVALCLN
             // 
             this.TxtLoteOrigenVALCLN.BackColor = System.Drawing.Color.White;
-            this.TxtLoteOrigenVALCLN.Location = new System.Drawing.Point(6, 45);
+            this.TxtLoteOrigenVALCLN.Location = new System.Drawing.Point(6, 43);
             this.TxtLoteOrigenVALCLN.MaxLength = 20;
             this.TxtLoteOrigenVALCLN.Name = "TxtLoteOrigenVALCLN";
             this.TxtLoteOrigenVALCLN.Size = new System.Drawing.Size(134, 21);
@@ -229,7 +251,7 @@
             // 
             this.LblArticulo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.LblArticulo.ForeColor = System.Drawing.Color.Gray;
-            this.LblArticulo.Location = new System.Drawing.Point(6, 155);
+            this.LblArticulo.Location = new System.Drawing.Point(6, 153);
             this.LblArticulo.Name = "LblArticulo";
             this.LblArticulo.Size = new System.Drawing.Size(53, 14);
             this.LblArticulo.Text = "Artículo";
@@ -238,7 +260,7 @@
             // 
             this.TxtArticuloVALCLN.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtArticuloVALCLN.Enabled = false;
-            this.TxtArticuloVALCLN.Location = new System.Drawing.Point(6, 172);
+            this.TxtArticuloVALCLN.Location = new System.Drawing.Point(6, 170);
             this.TxtArticuloVALCLN.Name = "TxtArticuloVALCLN";
             this.TxtArticuloVALCLN.Size = new System.Drawing.Size(227, 21);
             this.TxtArticuloVALCLN.TabIndex = 6;
@@ -285,5 +307,7 @@
         public System.Windows.Forms.PictureBox PtbValidaAlmacenDestino;
         private System.Windows.Forms.Label LblAlmacenDestino;
         private System.Windows.Forms.TextBox TxtAlmacenDestinoVAL;
+        public System.Windows.Forms.Label LblFolio;
+        public System.Windows.Forms.Label LblTotalTraspasos;
     }
 }

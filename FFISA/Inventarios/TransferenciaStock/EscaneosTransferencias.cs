@@ -132,6 +132,7 @@ namespace FFISA.Inventarios.TransferenciaStock
             EstadoInicializacion = ListaDetalles(Folio);
             this.FolioSelected = Folio;
             lblOC.Text = "Folio: " + Folio;
+            ObtenerTotalTraspasosHHRI(this.FolioSelected);
         }
         private string ListaDetalles(string Folio)
         {
@@ -267,6 +268,26 @@ namespace FFISA.Inventarios.TransferenciaStock
                 Error.Append(ex.InnerException != null ? ex.InnerException.ToString() : string.Empty);
                 result = "No fue posible eliminar el escaneo del documento: " + Error.ToString();
                 return result;
+            }
+        }
+        private void ObtenerTotalTraspasosHHRI(string Folio)
+        {
+            //Obtener el numero de rollos
+            Logic.AD.RequestParameters = new Dictionary<string, string>();
+            Logic.AD.RequestParameters.Add("FolioTS", Folio);
+            Logic.AD.RequestParameters.Add("Usuario", FormHelper.Usuario);
+            List<Dictionary<string, string>> TotalTraspasos = Logic.ExecGetRequest("/InventariosMovil/GetTotalTransferenciasHHRI", Logic.AD.RequestParameters, false, false);
+
+            if (TotalTraspasos[0]["Status"] == "NO" || TotalTraspasos[0]["Status"] == "ERROR")
+            {
+                string result = TotalTraspasos[0]["Message"];
+                LblTotalTraspasos.Text = "No fue posible obtener el número de rollos del recuento.";
+            }
+            else
+            {
+                //Asignar numero de rollos escaneados
+                string Total = TotalTraspasos[0]["TotalTraspaso"];
+                LblTotalTraspasos.Text = "No. rollos: " + Total;
             }
         }
         #endregion

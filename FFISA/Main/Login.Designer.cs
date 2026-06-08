@@ -85,7 +85,7 @@
             this.lblVersion.Location = new System.Drawing.Point(77, 298);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(161, 20);
-            this.lblVersion.Text = "FFISA PRODUCTIVO 1.86";
+            this.lblVersion.Text = "FFISA PRODUCTIVO 1.88";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // exit

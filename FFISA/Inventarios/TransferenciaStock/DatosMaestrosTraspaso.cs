@@ -181,6 +181,7 @@ namespace FFISA.Inventarios.TransferenciaStock
                             DatosEnvio.Add("Comentarios", TxtComentariosCLN.Text);
 
                         InsertaLineasTraspasosHHEMD();
+                        ObtenerTotalTraspasosHHRI();
                     }
 
                     else
@@ -208,6 +209,7 @@ namespace FFISA.Inventarios.TransferenciaStock
             InitializeComponent();
             this.CurrentData = CurrentData;
             TxtLoteOrigenVALCLN.Focus();
+            LblFolio.Text = "Folio: " + this.CurrentData["FolioTS"];
             EstadoInicializacion = "OK";
         }
         private bool validaCapturaArticulo(Panel PnlControls)
@@ -393,6 +395,26 @@ namespace FFISA.Inventarios.TransferenciaStock
                 Error.Append(ex.InnerException != null ? ex.InnerException.ToString() : string.Empty);
                 result = "No fue posible eliminar el documento: " + Error.ToString();
                 return result;
+            }
+        }
+        private void ObtenerTotalTraspasosHHRI()
+        {
+            //Obtener el numero de rollos
+            Logic.AD.RequestParameters = new Dictionary<string, string>();
+            Logic.AD.RequestParameters.Add("FolioTS", CurrentData["FolioTS"]);
+            Logic.AD.RequestParameters.Add("Usuario", FormHelper.Usuario);
+            List<Dictionary<string, string>> TotalTraspasos = Logic.ExecGetRequest("/InventariosMovil/GetTotalTransferenciasHHRI", Logic.AD.RequestParameters, false, false);
+
+            if (TotalTraspasos[0]["Status"] == "NO" || TotalTraspasos[0]["Status"] == "ERROR")
+            {
+                string result = TotalTraspasos[0]["Message"];
+                LblTotalTraspasos.Text = "No fue posible obtener el número de rollos del recuento.";
+            }
+            else
+            {
+                //Asignar numero de rollos escaneados
+                string Total = TotalTraspasos[0]["TotalTraspaso"];
+                LblTotalTraspasos.Text = "No. rollos: " + Total;
             }
         }
         #endregion
