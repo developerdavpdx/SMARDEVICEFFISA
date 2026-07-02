@@ -19,8 +19,8 @@ namespace FFISA.Model
         public string RESTAPIFFISA { get { return "http://172.16.2.42:83"; } } //REST API PRODUCTIVO
         //public string RESTAPIFFISA { get { return "http://100.111.180.26:83"; } } //REST API PRODUCTIVO
         public string RESTAPIPDX { get { return "http://172.16.2.42:81"; } } // REST API PRUEBAS
-        public string RESTAPIPDXLH { get { return "http://192.168.15.89:52585"; } } //REST API LOCALHOST
-        public string RESTAPI { get { return RESTAPIFFISA; } } //URL BASE API
+        public string RESTAPIPDXLH { get { return "http://192.168.0.84:52585"; } } //REST API LOCALHOST
+        public string RESTAPI { get { return RESTAPIPDXLH; } } //URL BASE API
         public Dictionary<string, string> RequestParameters { get; set; }
         public class ValidaUsuario
         {
